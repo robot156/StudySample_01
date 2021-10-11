@@ -10,7 +10,7 @@ import dagger.hilt.components.SingletonComponent
 
 @InstallIn(SingletonComponent::class)
 @Module
-object AppModule {
+class AppModule {
 
     @Provides
     fun providerBookSearch(impl: BookSearchRepositoryImpl) : BookSearchRepository {

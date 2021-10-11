@@ -7,8 +7,8 @@ object BookSearchMapper : EntityMapper<SearchBookEntity, SearchBookModel>() {
 
     override fun fromEntityModel(entity: SearchBookEntity): SearchBookModel {
         return SearchBookModel(
-            totalCount = entity.total_count,
-            pageableCount = entity.pageable_count,
+            totalCount = entity.totalCount,
+            pageableCount = entity.pageableCount,
             isEnd = entity.is_end,
             items = entity.items!!.map { BookInfoMapper.fromEntityModel(it) }
         )
@@ -17,8 +17,8 @@ object BookSearchMapper : EntityMapper<SearchBookEntity, SearchBookModel>() {
     override fun fromModelEntity(model: SearchBookModel): SearchBookEntity {
 
         return SearchBookEntity(
-            total_count = model.totalCount,
-            pageable_count = model.pageableCount,
+            totalCount = model.totalCount,
+            pageableCount = model.pageableCount,
             is_end = model.isEnd,
             items = model.items!!.map { BookInfoMapper.fromModelEntity(it) }
         )
