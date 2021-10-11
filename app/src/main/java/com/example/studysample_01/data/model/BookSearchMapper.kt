@@ -9,7 +9,7 @@ object BookSearchMapper : EntityMapper<SearchBookEntity, SearchBookModel>() {
         return SearchBookModel(
             totalCount = entity.totalCount,
             pageableCount = entity.pageableCount,
-            isEnd = entity.is_end,
+            isEnd = entity.isEnd,
             items = entity.items!!.map { BookInfoMapper.fromEntityModel(it) }
         )
     }
@@ -19,7 +19,7 @@ object BookSearchMapper : EntityMapper<SearchBookEntity, SearchBookModel>() {
         return SearchBookEntity(
             totalCount = model.totalCount,
             pageableCount = model.pageableCount,
-            is_end = model.isEnd,
+            isEnd = model.isEnd,
             items = model.items!!.map { BookInfoMapper.fromModelEntity(it) }
         )
     }

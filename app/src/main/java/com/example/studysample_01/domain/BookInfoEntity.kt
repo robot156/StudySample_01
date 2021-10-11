@@ -3,7 +3,7 @@ package com.example.studysample_01.domain
 data class SearchBookEntity(
     var totalCount: Int = 0,
     var pageableCount: Int = 0,
-    var is_end: Boolean = false,
+    var isEnd: Boolean = false,
     var items: List<BookInfoEntity>? = null
 ) : Entity()
 
