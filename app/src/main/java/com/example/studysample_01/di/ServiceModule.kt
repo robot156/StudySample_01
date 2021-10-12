@@ -10,7 +10,7 @@ import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
+import retrofit2.converter.gson.GsonConverterFactory
 
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
@@ -64,7 +64,7 @@ object ServiceModule {
     ): ServiceApi {
         return Retrofit.Builder()
             .client(okHttpClient)
-            .addConverterFactory(MoshiConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(API.BASE_URL)
             .build()
             .create(ServiceApi::class.java)

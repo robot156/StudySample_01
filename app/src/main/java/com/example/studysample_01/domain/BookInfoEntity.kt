@@ -1,9 +1,9 @@
 package com.example.studysample_01.domain
 
 data class SearchBookEntity(
-    var totalCount: Int = 0,
-    var pageableCount: Int = 0,
-    var isEnd: Boolean = false,
+    var total_count: Int = 0,
+    var pageable_count: Int = 0,
+    var is_end: Boolean = false,
     var items: List<BookInfoEntity>? = null
 ) : Entity()
 
